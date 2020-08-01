@@ -5,3 +5,5 @@ matplotlib
 seaborn
 cloudpickle
 flask
+missingno
+category-encoders
