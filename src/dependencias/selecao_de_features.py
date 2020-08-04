@@ -59,7 +59,7 @@ def boruta_selector(df, y=None):
     X = preprocessor_tree.fit_transform(df)
     rf = RandomForestClassifier(n_jobs=-1, class_weight='balanced', max_depth=5)    
 # Criando o boruta
-    feat_selector = BorutaPy(rf, n_estimators='auto', verbose=10, random_state=123, max_iter = 500) # 500 iterações até convergir
+    feat_selector = BorutaPy(rf, n_estimators='auto',random_state=123, max_iter = 100) # 500 iterações até convergir
     feat_selector.fit(X,Y)
 # Terceiro filtro com as features selecionadas pelo boruta
     cols_drop_boruta= [not x for x in feat_selector.support_.tolist()] # apenas invertendo o vetor de true/false
