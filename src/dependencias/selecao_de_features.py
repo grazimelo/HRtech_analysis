@@ -49,7 +49,7 @@ def chi_squared(df, y, cols = None):
 
 def boruta_selector(df, y=None):
     Y = df[y]
-    df.drop(y,axis=1,inplace=True)
+    df = df.drop(y,axis=1)
     num_feat = df.select_dtypes(include=['int','float']).columns.tolist()
     cat_feat = df.select_dtypes(include=['object']).columns.tolist()
     pipe_num_tree = Pipeline(steps= [('imputer',SimpleImputer(strategy = 'median'))])
@@ -70,3 +70,4 @@ def variance_threshold_selector(X, threshold=0.01):
     selector = VarianceThreshold(threshold)
     selector.fit(X)
     return X[X.columns[selector.get_support(indices=True)]]
+

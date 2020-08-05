@@ -7,3 +7,4 @@ cloudpickle
 flask
 missingno
 category-encoders
+shap
