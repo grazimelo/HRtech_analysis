@@ -1,2 +1,3 @@
-# case_rocketmat
-Case analítico proposto como etapa do processo seletivo de estágio em data science da rocketmat
+Dados de uma empresa de RH. 
+
+Dados disponiveis em : https://www.kaggle.com/krismurphy01/data-lab
